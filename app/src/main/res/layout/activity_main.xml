@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#000000">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play_game"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/Easy"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_weight="0.3"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/easy_button"/>
+
+        <ImageButton
+            android:id="@+id/Medium"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/medium_button"/>
+
+        <ImageButton
+            android:id="@+id/Hard"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:layout_weight="0.3"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/hard_button"/>
+    </LinearLayout>
+
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/leader_board"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:paddingBottom="20dp"
+        android:onClick="onClickLeaderboardBtn"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/exit_button"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:onClick="onClickExitBtn"/>
+
+</LinearLayout>
