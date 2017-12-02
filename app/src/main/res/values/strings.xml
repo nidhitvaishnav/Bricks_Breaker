@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bricks_Breaker</string>
     <string name="difficulty_intent">difficulty</string>
+    <string name="life_lbl">Life:</string>
 </resources>

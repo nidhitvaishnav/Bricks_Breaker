@@ -17,7 +17,6 @@ public class GameActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String difficulty = intent.getStringExtra(getString(R.string.difficulty_intent));
 
-
         if (difficulty=="Easy"){
             life = 3;
         }

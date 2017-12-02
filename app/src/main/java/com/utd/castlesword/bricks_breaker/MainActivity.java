@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,21 +15,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickEasyBtn(View view){
-
         Intent playGame = new Intent(getApplicationContext(),GameActivity.class);
-        playGame.putExtra(getString(R.string.difficulty_intent), ((Button)view).getId());
+        playGame.putExtra(getString(R.string.difficulty_intent), "Easy");
         startActivity(playGame);
     }
 
     public void onClickMediumBtn(View view){
         Intent playGame = new Intent(getApplicationContext(),GameActivity.class);
-        playGame.putExtra(getString(R.string.difficulty_intent), ((Button)view).getId());
+        playGame.putExtra(getString(R.string.difficulty_intent), "Medium");
         startActivity(playGame);
     }
 
     public void onClickHardBtn(View view){
         Intent playGame = new Intent(getApplicationContext(),GameActivity.class);
-        playGame.putExtra(getString(R.string.difficulty_intent), ((Button)view).getId());
+        playGame.putExtra(getString(R.string.difficulty_intent), "Hard");
         startActivity(playGame);
     }
 
