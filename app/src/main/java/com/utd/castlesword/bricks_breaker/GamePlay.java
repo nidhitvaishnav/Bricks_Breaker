@@ -29,5 +29,5 @@ public class GamePlay extends SurfaceView implements SurfaceHolder.Callback {
 
     public static float width; //screen width
     public static float height; //screen height
-    
+
 }

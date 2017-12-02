@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 
+import java.util.Random;
 
 
 public class Ball {
@@ -19,8 +20,11 @@ public class Ball {
 
     private boolean isMoving = false;
 
+    private int ballArr[] = {R.drawable.ball, R.drawable.fireball};
+
     Ball(Resources res, int initX, int initY) {
-        bitmap = BitmapFactory.decodeResource(res, R.drawable.fireball);
+        int rndIndex = new Random().nextInt(ballArr.length);
+        bitmap = BitmapFactory.decodeResource(res,ballArr[rndIndex]);
         x = initX;
         y = initY;
         speedX = initSpeedX;
