@@ -1,8 +1,11 @@
 package com.utd.castlesword.bricks_breaker;
 
 import android.content.Intent;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -27,10 +30,18 @@ public class GameActivity extends AppCompatActivity {
             life = 1;
         }
         else;
-        score = 0;
+
+        FrameLayout game = new FrameLayout(this);
+        GamePlay gamePlay = new GamePlay (this);
+
+        gamePlay.setZOrderOnTop(true);
+        gamePlay.getHolder().setFormat(PixelFormat.TRANSLUCENT);
+
+        game.addView(gamePlay);
+        setContentView(game);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
     }
 
-
-
-
 }
+

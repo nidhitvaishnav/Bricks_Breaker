@@ -2,4 +2,5 @@
     <string name="app_name">Bricks_Breaker</string>
     <string name="difficulty_intent">difficulty</string>
     <string name="life_lbl">Life:</string>
+    <string name="description">Background Image</string>
 </resources>
