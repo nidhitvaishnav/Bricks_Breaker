@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-/*  Created by: Nidhi Vaishnav
-    Subject : Human computer Interaction
-**/
+/**  Created by: Nidhi Vaishnav
+ *    Subject : Human computer Interaction
+ */
 
 public class GameActivity extends AppCompatActivity {
 

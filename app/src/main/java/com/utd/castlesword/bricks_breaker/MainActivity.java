@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-/*  Created by: Nidhi Vaishnav
-    Subject : Human computer Interaction
-**/
+/**  Created by: Nidhi Vaishnav
+ *    Subject : Human computer Interaction
+ */
 
 //This is the first screen of the game, from which user can select difficulty
 public class MainActivity extends AppCompatActivity {

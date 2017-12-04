@@ -7,6 +7,10 @@ import android.graphics.Canvas;
 
 import java.util.Random;
 
+/**  Created by: Nidhi Vaishnav
+ *    Subject : Human computer Interaction
+ */
+
 
 public class Ball {
     private float x, y;
@@ -23,25 +27,30 @@ public class Ball {
     private int ballArr[] = {R.drawable.ball, R.drawable.fireball};
 
     Ball(Resources res, int initX, int initY) {
+        //take any ball randomly
         int rndIndex = new Random().nextInt(ballArr.length);
         bitmap = BitmapFactory.decodeResource(res,ballArr[rndIndex]);
+        //initialize co-ordinates and speed of ball
         x = initX;
         y = initY;
         speedX = initSpeedX;
         speedY = initSpeedY;
     }
 
+    //draw ball
     void doDraw(Canvas canvas) {
         canvas.drawBitmap(bitmap, x, y, null);
     }
 
+    //logice for ball movement
     void animate(long passedTime) {
         x += speedX * (passedTime / 15f);
         y += speedY * (passedTime / 15f);
-        hitPageBorder();
+        cornerBounce();
     }
 
-    void hitPageBorder() {
+    //if ball hit corner, bounce it
+    void cornerBounce() {
         if (x <= 0) {
             speedX = -speedX;
             x = 0;
@@ -104,7 +113,7 @@ public class Ball {
         isMoving = true;
     }
 
-    boolean isMovin() {
+    boolean isMoving() {
         return isMoving;
     }
 }

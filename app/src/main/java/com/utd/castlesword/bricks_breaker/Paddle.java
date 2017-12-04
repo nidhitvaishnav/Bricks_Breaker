@@ -5,6 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 
+/**  Created by: Nidhi Vaishnav
+ *    Subject : Human computer Interaction
+ */
 
 
 public class Paddle {
@@ -18,6 +21,7 @@ public class Paddle {
     private boolean isAlive;
     private int remaininglives;
 
+    //creating paddle
     Paddle(Resources res, int setLife) {
         bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle1);
         height = bitmap.getHeight();
@@ -28,10 +32,13 @@ public class Paddle {
         isAlive= true;
         remaininglives = setLife;
     }
+
+    //drawing paddle object on canvas
     void doDraw(Canvas canvas) {
         canvas.drawBitmap(bitmap, x, y, null);
     }
 
+    //moving paddle
     void animate(int orientation) {
         if (orientation < 0) {
             x=x-14;
@@ -47,7 +54,8 @@ public class Paddle {
         }
 
     }
-    void loseOneLife() {
+
+    void loseLife() {
         if (remaininglives-- == 1) {
             gameOver();
         }
@@ -81,6 +89,7 @@ public class Paddle {
         return y;
     }
 
+    //for each level change the paddles
     float level2(Resources res, Canvas canvas){
         bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle2);
         canvas.drawBitmap(bitmap, x, y, null);

@@ -8,7 +8,9 @@ import android.graphics.Rect;
 
 import java.util.Random;
 
-
+/**  Created by: Nidhi Vaishnav
+ *    Subject : Human computer Interaction
+ */
 
 public class Brick {
     private float x, y;
@@ -20,15 +22,14 @@ public class Brick {
 
     private Bitmap bitmap;
 
+    //providing bricks array
     private int imgArr[] = {R.drawable.brick_blue, R.drawable.brick_red,
                             R.drawable.brick_green, R.drawable.brick_yellow,
                             R.drawable.brick_bonus};
 
     Brick(Resources res, int ilkX, int ilkY) {
-
-
+        //selecting brick randomly
         int rndIndex = new Random().nextInt(imgArr.length);
-
         bitmap = BitmapFactory.decodeResource(res, imgArr[rndIndex]);
 
         x = ilkX;
@@ -36,10 +37,12 @@ public class Brick {
         alive = true;
     }
 
+    //drawing brick
     void doDraw(Canvas canvas) {
         canvas.drawBitmap(bitmap, null, new Rect((int)x, (int)y, (int)(x+width), (int)(y+height)), null);
     }
 
+    //if brick got hit, it is not alive anymore
     void hit() {
         alive = false;
     }

@@ -3,9 +3,9 @@ package com.utd.castlesword.bricks_breaker;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
-/**
- * Created by CastleSword on 02-12-2017.
- */
+/**  Created by: Nidhi Vaishnav
+*    Subject : Human computer Interaction
+*/
 
 public class GameThread extends Thread {
     private GamePlay gamePlay;
@@ -14,17 +14,19 @@ public class GameThread extends Thread {
     private long startTime;
     private long passedTime=0;
 
-    public GameThread(GamePlay screen) {
-        gamePlay = screen;
+    //Constructor is initializing gamePlay
+    public GameThread(GamePlay myGame) {
+        gamePlay = myGame;
         surfaceHolder = gamePlay.getHolder();
     }
 
+    //run game
     @Override
     public void run() {
         Canvas canvas = null;
 
+        //create animation by redrawing every time
         while (runStatus) {
-
             startTime = System.currentTimeMillis();
             canvas = surfaceHolder.lockCanvas();
             if (canvas != null) {
