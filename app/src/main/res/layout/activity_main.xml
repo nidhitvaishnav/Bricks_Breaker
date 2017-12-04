@@ -54,16 +54,16 @@
     </LinearLayout>
 
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:background="@null"
-        android:onClick="onClickLeaderboardBtn"
-        android:paddingBottom="20dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/leader_board"/>
+    <!--<ImageButton-->
+        <!--android:id="@+id/imageButton"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@null"-->
+        <!--android:onClick="onClickLeaderboardBtn"-->
+        <!--android:paddingBottom="20dp"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/leader_board"/>-->
 
     <ImageButton
         android:id="@+id/imageButton2"

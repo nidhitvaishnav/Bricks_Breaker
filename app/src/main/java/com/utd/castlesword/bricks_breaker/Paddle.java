@@ -5,9 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 
-/**
- * Created by CastleSword on 02-12-2017.
- */
+
 
 public class Paddle {
     private float x, y;
@@ -20,15 +18,15 @@ public class Paddle {
     private boolean isAlive;
     private int remaininglives;
 
-    Paddle(Resources res) {
-        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle);
+    Paddle(Resources res, int setLife) {
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle1);
         height = bitmap.getHeight();
         width = bitmap.getWidth();
         x = (GamePlay.width / 2) - (width / 2);
-        y = GamePlay.height - 50;
+        y = GamePlay.height - 100;
 
         isAlive= true;
-        remaininglives = 3;
+        remaininglives = setLife;
     }
     void doDraw(Canvas canvas) {
         canvas.drawBitmap(bitmap, x, y, null);
@@ -36,10 +34,10 @@ public class Paddle {
 
     void animate(int orientation) {
         if (orientation < 0) {
-            x=x-10;
+            x=x-14;
         }
         else if (orientation > 0) {
-            x=x+10;
+            x=x+14;
         }
         if (x < 0) {
             x = 0;
@@ -81,6 +79,36 @@ public class Paddle {
 
     float getY() {
         return y;
+    }
+
+    float level2(Resources res, Canvas canvas){
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle2);
+        canvas.drawBitmap(bitmap, x, y, null);
+        width = bitmap.getWidth();
+
+        return width;
+    }
+    float level3(Resources res, Canvas canvas){
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle3);
+        canvas.drawBitmap(bitmap, x, y, null);
+        width = bitmap.getWidth();
+
+        return width;
+    }
+    float level4(Resources res, Canvas canvas) {
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle4);
+        canvas.drawBitmap(bitmap, x, y, null);
+        width = bitmap.getWidth();
+
+        return width;
+    }
+
+    float level5(Resources res, Canvas canvas){
+        bitmap = BitmapFactory.decodeResource(res, R.drawable.paddle5);
+        canvas.drawBitmap(bitmap, x, y, null);
+        width = bitmap.getWidth();
+
+        return width;
     }
 
 }

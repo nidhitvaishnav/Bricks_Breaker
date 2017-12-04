@@ -13,8 +13,8 @@ public class Ball {
 
     private int speedX, speedY;
 
-    public static int initSpeedX = 4;
-    public static int initSpeedY = -4;
+    public static int initSpeedX = 7;
+    public static int initSpeedY = -7;
 
     private Bitmap bitmap;
 
